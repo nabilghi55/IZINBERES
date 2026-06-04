@@ -25,46 +25,46 @@ const HomePage = () => {
 
   const featuredServices = [
     {
-      title: 'Pendirian PT',
-      description: 'Solusi lengkap pendirian PT Lokal. Cepat, aman, dan sudah termasuk Akta, SK, NIB, dan NPWP.',
+      title: t.serviceList[0].services[0].title,
+      description: t.serviceList[0].services[0].description,
       icon: Building2,
       href: '/services/pendirian-pt',
-      category: 'Legalitas Bisnis'
+      category: t.serviceList[0].category
     },
     {
-      title: 'PT PMA',
-      description: 'Bantu investor asing mendirikan bisnis di Indonesia dengan kepatuhan hukum 100%.',
+      title: t.serviceList[0].services[1].title,
+      description: t.serviceList[0].services[1].description,
       icon: Globe,
       href: '/services/pt-pma',
-      category: 'Investasi Asing'
+      category: t.serviceList[0].category
     },
     {
-      title: 'Izin BPOM',
-      description: 'Registrasi produk pangan, kosmetik, dan obat untuk mendapatkan Nomor Izin Edar (NIE).',
+      title: t.serviceList[1].services[0].title,
+      description: t.serviceList[1].services[0].description,
       icon: Stethoscope,
       href: '/services/bpom',
-      category: 'Sertifikasi Produk'
+      category: t.serviceList[1].category
     },
     {
-      title: 'Sertifikasi Halal',
-      description: 'Layanan pengurusan sertifikat Halal resmi dari BPJPH untuk meningkatkan nilai produk.',
+      title: t.serviceList[1].services[1].title,
+      description: t.serviceList[1].services[1].description,
       icon: ChefHat,
       href: '/services/halal',
-      category: 'Sertifikasi Produk'
+      category: t.serviceList[1].category
     },
     {
-      title: 'Pendaftaran Merek',
-      description: 'Lindungi merek dan hak kekayaan intelektual (HAKI) Anda dari penyalahgunaan.',
+      title: t.serviceList[1].services[2].title,
+      description: t.serviceList[1].services[2].description,
       icon: Briefcase,
       href: '/services/haki',
-      category: 'HAKI'
+      category: t.serviceList[1].category
     },
     {
-      title: 'KITAS & Izin Kerja',
-      description: 'Pengurusan izin tinggal dan kerja bagi Tenaga Kerja Asing (TKA) secara legal.',
+      title: t.serviceList[2].services[0].title,
+      description: t.serviceList[2].services[0].description,
       icon: ShieldCheck,
-      href: '/services/kitas',
-      category: 'Imigrasi'
+      href: '/services/oss',
+      category: t.serviceList[2].category
     }
   ];
 
@@ -146,10 +146,6 @@ const HomePage = () => {
               <ServiceCard 
                 key={idx} 
                 {...service} 
-                title={service.title}
-                description={service.description}
-                href={service.href}
-                category={service.category}
               />
             ))}
           </div>
@@ -209,7 +205,7 @@ const HomePage = () => {
       {/* Trust Slider */}
       <section className="py-20 bg-white border-t border-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
-          <p className="text-gray-400 font-black uppercase tracking-[0.3em] text-xs">Diakui & Terdaftar Di</p>
+          <p className="text-gray-400 font-black uppercase tracking-[0.3em] text-xs">{t.about.trustTitle}</p>
         </div>
         <LogoSlider />
       </section>
